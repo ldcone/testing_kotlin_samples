@@ -15,7 +15,7 @@
         <activity android:name=".PhotoFrameActivity"
             android:screenOrientation="landscape"/>
         <activity
-            android:name=".gettingpush.MainActivity"
+            android:name=".today_word.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
