@@ -64,11 +64,12 @@ class MainActivity:AppCompatActivity() {
             renderView(newModel)
             Log.d("newModel","$newModel")
             if(newModel.onOff){
-                //켜진 경우 등록
+                //꺼진 경우 등록
                 val calendar = Calendar.getInstance().apply {
                     set(Calendar.HOUR_OF_DAY,newModel.hour)
                     set(Calendar.MINUTE,newModel.minute)
 
+                    //
                     if(before(Calendar.getInstance())){
                         add(Calendar.DATE,1)
                     }

@@ -9,6 +9,7 @@
         <entry key="app/src/main/res/drawable/ic_baseline_unfold_less_24.xml" value="0.20555555555555555" />
         <entry key="app/src/main/res/drawable/shape_address_bar.xml" value="0.33611111111111114" />
         <entry key="app/src/main/res/drawable/tick_mark.xml" value="0.20555555555555555" />
+        <entry key="app/src/main/res/layout/activity_bookreview.xml" value="0.20625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.21739130434782608" />
         <entry key="app/src/main/res/layout/activity_main_alarm.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main_picture.xml" value="0.19303955933900852" />
@@ -18,6 +19,7 @@
         <entry key="app/src/main/res/layout/activity_photoframe.xml" value="0.19303955933900852" />
         <entry key="app/src/main/res/layout/actvity_main_gettingpush.xml" value="0.21784420289855072" />
         <entry key="app/src/main/res/layout/history_row.xml" value="0.2125" />
+        <entry key="app/src/main/res/layout/item_book.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_quote.xml" value="0.25" />
       </map>
     </option>
