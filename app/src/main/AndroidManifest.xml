@@ -15,7 +15,7 @@
         <activity android:name=".PhotoFrameActivity"
             android:screenOrientation="landscape"/>
         <activity
-            android:name=".alarm.MainActivity"
+            android:name=".bookreview.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
