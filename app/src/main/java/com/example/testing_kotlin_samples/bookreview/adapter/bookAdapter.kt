@@ -18,8 +18,8 @@ class bookAdapter:ListAdapter<Book,bookAdapter.BookItemViewHolder>(diffUtil) {
     }
 
     override fun onBindViewHolder(holder: BookItemViewHolder, position: Int) {
-//       holder.bind(currentList[position])
-        holder.bind(getItem(position))
+       holder.bind(currentList[position])
+//        holder.bind(getItem(position))
     }
 
 

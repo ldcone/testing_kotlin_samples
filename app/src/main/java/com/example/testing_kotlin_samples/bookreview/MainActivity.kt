@@ -61,6 +61,7 @@ class MainActivity:AppCompatActivity() {
 
         binding.searchEditText.setOnKeyListener{v, KeyCode, event->
             if(KeyCode == KeyEvent.KEYCODE_ENTER && event.action == MotionEvent.ACTION_DOWN){
+                Log.d("finding_error","search_start")
                 search(binding.searchEditText.text.toString())
                 return@setOnKeyListener true
             }
@@ -69,21 +70,27 @@ class MainActivity:AppCompatActivity() {
     }
 
     private fun search(keyword: String) {
+        Log.d("finding_error","search_start2")
+
         bookService.getBooksByName(getString(R.string.interparkAPIkey),keyword)
             .enqueue(object : Callback<SearchBookDto>{
                 override fun onResponse(call: Call<SearchBookDto>, response: Response<SearchBookDto>
                 ) {
+                    Log.d("finding_error","search_start3")
+
                     if(response.isSuccessful.not()){
                         return
                     }
-                    bookAdapter.submitList(response.body()?.books.orEmpty())
-//                    response.body()?.let {
-//                        Log.d(TAG,it.toString())
-//                        it.books.forEach{book ->
-//                            Log.d(TAG,book.toString())
-//                        }
-//                        bookAdapter.submitList(it.books)
-//                    }
+//                    bookAdapter.submitList(response.body()?.books.orEmpty())
+                    response.body()?.let {
+                        Log.d(TAG,it.toString())
+                        Log.d("finding_error","search_start4")
+
+                        it.books.forEach{book ->
+                            Log.d(TAG,book.toString())
+                        }
+                        bookAdapter.submitList(it.books)
+                    }
                 }
 
                 override fun onFailure(call: Call<SearchBookDto>, t: Throwable) {

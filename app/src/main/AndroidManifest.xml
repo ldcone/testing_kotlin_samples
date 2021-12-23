@@ -15,7 +15,7 @@
         <activity android:name=".PhotoFrameActivity"
             android:screenOrientation="landscape"/>
         <activity
-            android:name=".bookreview.MainActivity"
+            android:name=".bookreview.MainActivityDiDi"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
