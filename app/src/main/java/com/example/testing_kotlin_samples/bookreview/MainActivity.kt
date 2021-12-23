@@ -3,9 +3,12 @@ package com.example.testing_kotlin_samples.bookreview
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.testing_kotlin_samples.R
+import com.example.testing_kotlin_samples.bookreview.adapter.bookAdapter
 import com.example.testing_kotlin_samples.bookreview.api.BookService
 import com.example.testing_kotlin_samples.bookreview.model.BestSellerDto
+import com.example.testing_kotlin_samples.databinding.ActivityBookreviewBinding
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -13,9 +16,16 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity:AppCompatActivity() {
+    private lateinit var binding: ActivityBookreviewBinding
+    private lateinit var bookAdapter: bookAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_bookreview)
+        binding = ActivityBookreviewBinding.inflate(layoutInflater)
+
+        setContentView(binding.root)
+
+        initBookRecyclerView()
+
         val retrofit = Retrofit.Builder()
             .baseUrl("http://book.interpark.com")
             .addConverterFactory(GsonConverterFactory.create())
@@ -35,6 +45,7 @@ class MainActivity:AppCompatActivity() {
                         it.books.forEach{book ->
                             Log.d(TAG,book.toString())
                         }
+                        bookAdapter.submitList(it.books)
                     }
                 }
 
@@ -43,6 +54,12 @@ class MainActivity:AppCompatActivity() {
                 }
 
             })
+    }
+
+    private fun initBookRecyclerView() {
+        bookAdapter = bookAdapter()
+        binding.bookRecyclerView.layoutManager =LinearLayoutManager(this)
+        binding.bookRecyclerView.adapter = bookAdapter
     }
 
     companion object{

@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/background_gray_stroke_radius_8.xml" value="0.33796296296296297" />
         <entry key="app/src/main/res/drawable/background_white_ring.xml" value="0.35648148148148145" />
         <entry key="app/src/main/res/drawable/button_background.xml" value="0.335" />
         <entry key="app/src/main/res/drawable/button_background_green.xml" value="0.43072916666666666" />
