@@ -11,6 +11,7 @@
         <entry key="app/src/main/res/drawable/shape_address_bar.xml" value="0.33611111111111114" />
         <entry key="app/src/main/res/drawable/tick_mark.xml" value="0.20555555555555555" />
         <entry key="app/src/main/res/layout/activity_bookreview.xml" value="0.20625" />
+        <entry key="app/src/main/res/layout/activity_bookreview_detail.xml" value="0.22056159420289856" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.21739130434782608" />
         <entry key="app/src/main/res/layout/activity_main_alarm.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main_picture.xml" value="0.19303955933900852" />

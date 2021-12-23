@@ -9,7 +9,7 @@ import com.bumptech.glide.Glide
 import com.example.testing_kotlin_samples.bookreview.model.Book
 import com.example.testing_kotlin_samples.databinding.ItemBookBinding
 
-class bookAdapter:ListAdapter<Book,bookAdapter.BookItemViewHolder>(diffUtil) {
+class bookAdapter(private val itemClickedListener:(Book) -> Unit):ListAdapter<Book,bookAdapter.BookItemViewHolder>(diffUtil) {
 
 
 
@@ -30,6 +30,10 @@ class bookAdapter:ListAdapter<Book,bookAdapter.BookItemViewHolder>(diffUtil) {
         fun bind(bookModel:Book){
             binding.titleTV.text = bookModel.title
             binding.descriptionTV.text = bookModel.description
+
+            binding.root.setOnClickListener {
+                itemClickedListener(bookModel)
+            }
 
             Glide.with(binding.coverImageView.context)
                 .load(bookModel.coverSmallUrl)
