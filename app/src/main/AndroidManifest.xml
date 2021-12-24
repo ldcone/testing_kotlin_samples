@@ -15,8 +15,9 @@
         <activity android:name=".PhotoFrameActivity"
             android:screenOrientation="landscape"/>
         <activity android:name=".bookreview.DetailActivity"/>
+        <activity android:name=".tinder.LoginActivity"/>
         <activity
-            android:name=".bookreview.MainActivityDiDi"
+            android:name=".tinder.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

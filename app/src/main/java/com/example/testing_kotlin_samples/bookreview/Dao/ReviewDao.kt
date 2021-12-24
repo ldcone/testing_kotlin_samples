@@ -10,7 +10,7 @@ import com.example.testing_kotlin_samples.bookreview.model.Review
 interface ReviewDao {
 
     @Query("SELECT * FROM review WHERE id =:id")
-    fun getOneReview(id: Int): Review
+    fun getOneReview(id: Int): Review?
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun saveReview(review: Review)

@@ -16,11 +16,8 @@ class DetailActivity:AppCompatActivity() {
         binding = ActivityBookreviewDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        db = Room.databaseBuilder(
-            applicationContext,
-            AppDatabase::class.java,
-            "BookSearchDB"
-        ).build()
+        db = getAppDatabase(this)
+
 
         val model = intent.getParcelableExtra<Book>("bookModel")
         binding.titleTV.text = model?.title.orEmpty()
@@ -33,9 +30,9 @@ class DetailActivity:AppCompatActivity() {
         Thread{
             val review = db.reviewDao().getOneReview(model?.id?.toInt() ?: 0)
             runOnUiThread{
-                binding.reviewEditText.setText(review.review.orEmpty())
+                binding.reviewEditText.setText(review?.review.orEmpty())
             }
-        }
+        }.start()
 
         binding.saveButton.setOnClickListener {
             Thread{
