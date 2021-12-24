@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.testing_kotlin_samples"
-        minSdk 24
+        minSdk 22
         targetSdk 31
         versionCode 1
         versionName "1.0"
