@@ -2,4 +2,7 @@
     <string name="app_name">testing_kotlin_samples</string>
     <string name="change_time">시간 재설정</string>
     <string name="on_alarm">알람 켜기</string>
+    <string name="facebook_app_id">741916360066952</string>
+    <string name="fb_login_protocol_scheme">fb741916360066952</string>
+
 </resources>

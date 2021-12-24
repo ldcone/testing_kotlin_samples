@@ -30,6 +30,8 @@ class MainActivityPPmo:AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_ppomo)
+
+        val seekbar2 =findViewById<SeekBar>(R.id.seekBar)
         bindViews()
         initsound()
     }

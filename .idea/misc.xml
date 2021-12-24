@@ -19,11 +19,13 @@
         <entry key="app/src/main/res/layout/activity_main_simpleweb.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_main_todayword.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_photoframe.xml" value="0.19303955933900852" />
+        <entry key="app/src/main/res/layout/activity_tinder_like.xml" value="0.22056159420289856" />
         <entry key="app/src/main/res/layout/activity_tinder_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_tinder_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/actvity_main_gettingpush.xml" value="0.21784420289855072" />
         <entry key="app/src/main/res/layout/history_row.xml" value="0.2125" />
         <entry key="app/src/main/res/layout/item_book.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_card.xml" value="0.22056159420289856" />
         <entry key="app/src/main/res/layout/item_history.xml" value="0.22056159420289856" />
         <entry key="app/src/main/res/layout/item_quote.xml" value="0.25" />
       </map>
