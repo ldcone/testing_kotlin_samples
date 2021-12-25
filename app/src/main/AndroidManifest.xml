@@ -43,7 +43,7 @@
         <activity android:name=".tinder.LoginActivity" />
         <activity android:name=".tinder.LikeActivity"/>
         <activity
-            android:name=".tinder.MainActivity"
+            android:name=".tradeapp.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -51,7 +51,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".tradeapp.MainActivity"/>
+        <activity android:name=".tinder.MainActivity"/>
 
         <receiver
             android:name=".alarm.AlarmReceiver"

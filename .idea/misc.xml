@@ -8,6 +8,7 @@
         <entry key="app/src/main/res/drawable/button_background.xml" value="0.335" />
         <entry key="app/src/main/res/drawable/button_background_green.xml" value="0.43072916666666666" />
         <entry key="app/src/main/res/drawable/ic_baseline_unfold_less_24.xml" value="0.20555555555555555" />
+        <entry key="app/src/main/res/drawable/nav_selector.xml" value="0.33240740740740743" />
         <entry key="app/src/main/res/drawable/shape_address_bar.xml" value="0.33611111111111114" />
         <entry key="app/src/main/res/drawable/tick_mark.xml" value="0.20555555555555555" />
         <entry key="app/src/main/res/layout/activity_bookreview.xml" value="0.20625" />
@@ -25,12 +26,17 @@
         <entry key="app/src/main/res/layout/activity_tinder_match.xml" value="0.20625" />
         <entry key="app/src/main/res/layout/activity_trade_main.xml" value="0.22056159420289856" />
         <entry key="app/src/main/res/layout/actvity_main_gettingpush.xml" value="0.21784420289855072" />
+        <entry key="app/src/main/res/layout/fragment_chatlist.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_mypage.xml" value="0.19303955933900852" />
         <entry key="app/src/main/res/layout/history_row.xml" value="0.2125" />
         <entry key="app/src/main/res/layout/item_book.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_card.xml" value="0.22056159420289856" />
         <entry key="app/src/main/res/layout/item_history.xml" value="0.22056159420289856" />
         <entry key="app/src/main/res/layout/item_matched_user.xml" value="0.20625" />
         <entry key="app/src/main/res/layout/item_quote.xml" value="0.25" />
+        <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.2125" />
+        <entry key="app/src/main/res/menu/menu.xml" value="0.4015625" />
       </map>
     </option>
   </component>
