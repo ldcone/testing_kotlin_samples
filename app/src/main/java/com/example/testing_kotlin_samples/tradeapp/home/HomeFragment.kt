@@ -1,7 +1,9 @@
 package com.example.testing_kotlin_samples.tradeapp.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.testing_kotlin_samples.R
@@ -68,6 +70,15 @@ class HomeFragment:Fragment(R.layout.fragment_home) {
         binding.articleRecyclerView.adapter = articleAdapter
 
         articleDB.addChildEventListener(listener)
+        binding.addFloatingButton.setOnClickListener {
+//            if(auth.currentUser != null){
+//
+//            }else{
+//                Toast.makeText(requireContext(),"로그인후 사용 가능",Toast.LENGTH_SHORT).show()
+//            }
+            startActivity(Intent(requireContext(),ArticleAddActivity::class.java))
+
+        }
 
 
     }

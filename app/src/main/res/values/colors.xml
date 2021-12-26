@@ -21,4 +21,5 @@
     <color name="dark_gray">#FF707070</color>
     <color name="background_alarm_black">#222222</color>
     <color name="gray">#aaaaaa</color>
+    <color name="orange">#F44336</color>
 </resources>

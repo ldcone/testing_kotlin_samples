@@ -42,6 +42,7 @@
         <activity android:name=".bookreview.DetailActivity" />
         <activity android:name=".tinder.LoginActivity" />
         <activity android:name=".tinder.LikeActivity"/>
+        <activity android:name=".tradeapp.home.ArticleAddActivity"/>
         <activity
             android:name=".tradeapp.MainActivity"
             android:exported="true">
