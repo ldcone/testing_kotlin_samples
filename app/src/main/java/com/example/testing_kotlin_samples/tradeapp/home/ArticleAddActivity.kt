@@ -35,6 +35,7 @@ class ArticleAddActivity:AppCompatActivity() {
     }
 
     private var selectedUri: Uri? = null
+
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,11 +64,51 @@ class ArticleAddActivity:AppCompatActivity() {
             val price = binding.priceET.text.toString()
             val sellerid = auth.currentUser?.uid.orEmpty()
 
-            val model = ArticleModel(sellerid,title,System.currentTimeMillis(),"$price 원","")
-            articleDB.push().setValue(model)
-            finish()
+            if(selectedUri != null){
+                val photoUri = selectedUri ?: return@setOnClickListener
+                uploadPhoto(photoUri,
+                    successHandler = {Uri ->
+                        uploadArticle(sellerid,title,price,Uri)
+                    },
+                    errorHandler = {
+                        Toast.makeText(this,"사진 업로드에 실패했습니다.",Toast.LENGTH_SHORT).show()
+                    }
+
+                    )
+            }else{
+                uploadArticle(sellerid,title,price,"")
+
+            }
+
+
         }
     }
+
+    private fun uploadPhoto(uri: Uri,successHandler: (String) -> Unit, errorHandler: () -> Unit ) {
+        val fileName = "${System.currentTimeMillis()}.png"
+        storage.reference.child("article/photo").child(fileName)
+            .putFile(uri)
+            .addOnCompleteListener {
+                if(it.isSuccessful){
+                    storage.reference.child("article/photo").child(fileName)
+                        .downloadUrl
+                        .addOnSuccessListener { uri->
+                            successHandler(uri.toString())
+                        }.addOnFailureListener {
+                            errorHandler()
+                        }
+                }else{
+                    errorHandler()
+                }
+            }
+
+    }
+    private fun uploadArticle(sellerId:String, title:String, price:String, imageUrl:String){
+        val model = ArticleModel(sellerId,title,System.currentTimeMillis(),"$price 원",imageUrl)
+        articleDB.push().setValue(model)
+        finish()
+    }
+
 
     @RequiresApi(Build.VERSION_CODES.M)
     private fun showPermissionContextPopup() {
