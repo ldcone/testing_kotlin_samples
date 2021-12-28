@@ -35,6 +35,7 @@
         <entry key="app/src/main/res/layout/item_article.xml" value="0.19303955933900852" />
         <entry key="app/src/main/res/layout/item_book.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_card.xml" value="0.22056159420289856" />
+        <entry key="app/src/main/res/layout/item_chat.xml" value="0.286231884057971" />
         <entry key="app/src/main/res/layout/item_chat_list.xml" value="0.286231884057971" />
         <entry key="app/src/main/res/layout/item_history.xml" value="0.22056159420289856" />
         <entry key="app/src/main/res/layout/item_matched_user.xml" value="0.20625" />

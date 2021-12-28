@@ -1,5 +1,6 @@
 package com.example.testing_kotlin_samples.tradeapp.chatlist
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -29,9 +30,15 @@ class ChatListFragment:Fragment(R.layout.fragment_chatlist) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentChatlistBinding.bind(view)
-        chatListAdapter = ChatListAdapter(onItemClicked = {
+        chatListAdapter = ChatListAdapter(onItemClicked = {chatRoom ->
+            context?.let {
+                val intent = Intent(it,chatRoomActivity::class.java)
+                intent.putExtra("chatKey",chatRoom.key)
+                startActivity(intent)
+            }
             // chatroom
         })
+        chatRoomList.clear()
         binding.chatListRecyclerView.adapter = chatListAdapter
         binding.chatListRecyclerView.layoutManager = LinearLayoutManager(context)
 
@@ -60,7 +67,7 @@ class ChatListFragment:Fragment(R.layout.fragment_chatlist) {
 
     override fun onResume() {
         super.onResume()
-        chatRoomList.clear()
+
         chatListAdapter.notifyDataSetChanged()
     }
 }
