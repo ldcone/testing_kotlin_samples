@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
 import com.example.testing_kotlin_samples.databinding.ActivityTradeAddarticleBinding
 import com.example.testing_kotlin_samples.tradeapp.DBKey.Companion.DB_ARTICLES
 import com.google.firebase.auth.FirebaseAuth
@@ -64,6 +65,8 @@ class ArticleAddActivity:AppCompatActivity() {
             val price = binding.priceET.text.toString()
             val sellerid = auth.currentUser?.uid.orEmpty()
 
+            showProgress()
+
             if(selectedUri != null){
                 val photoUri = selectedUri ?: return@setOnClickListener
                 uploadPhoto(photoUri,
@@ -72,6 +75,7 @@ class ArticleAddActivity:AppCompatActivity() {
                     },
                     errorHandler = {
                         Toast.makeText(this,"사진 업로드에 실패했습니다.",Toast.LENGTH_SHORT).show()
+                        hideProgress()
                     }
 
                     )
@@ -82,6 +86,12 @@ class ArticleAddActivity:AppCompatActivity() {
 
 
         }
+    }
+    private fun showProgress(){
+        binding.progressBar.isVisible = true
+    }
+    private fun hideProgress(){
+        binding.progressBar.isVisible = false
     }
 
     private fun uploadPhoto(uri: Uri,successHandler: (String) -> Unit, errorHandler: () -> Unit ) {
@@ -106,6 +116,7 @@ class ArticleAddActivity:AppCompatActivity() {
     private fun uploadArticle(sellerId:String, title:String, price:String, imageUrl:String){
         val model = ArticleModel(sellerId,title,System.currentTimeMillis(),"$price 원",imageUrl)
         articleDB.push().setValue(model)
+        hideProgress()
         finish()
     }
 
