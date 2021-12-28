@@ -1,0 +1,51 @@
+package com.example.testing_kotlin_samples.tradeapp.chatlist
+
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
+import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.example.testing_kotlin_samples.databinding.ItemArticleBinding
+import com.example.testing_kotlin_samples.databinding.ItemChatListBinding
+import com.example.testing_kotlin_samples.tradeapp.home.ArticleAdapter
+import com.example.testing_kotlin_samples.tradeapp.home.ArticleModel
+import java.text.SimpleDateFormat
+import java.util.*
+
+class ChatListAdapter (val onItemClicked:(ChatListItem) -> Unit):
+    ListAdapter<ChatListItem, ChatListAdapter.ViewHolder>(diffUtil) {
+
+    inner class ViewHolder(private val binding: ItemChatListBinding): RecyclerView.ViewHolder(binding.root) {
+        fun bind(chatlist: ChatListItem){
+            binding.chatRoomTitleTV.text = chatlist.itemTitle
+            binding.root.setOnClickListener {
+                onItemClicked(chatlist)
+            }
+        }
+    }
+
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        return ViewHolder(ItemChatListBinding.inflate(LayoutInflater.from(parent.context),parent,false))
+    }
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.bind(currentList[position])
+    }
+
+
+    companion object {
+        val diffUtil = object : DiffUtil.ItemCallback<ChatListItem>(){
+            override fun areItemsTheSame(oldItem: ChatListItem, newItem: ChatListItem): Boolean {
+                return oldItem.key == newItem.key
+            }
+
+            override fun areContentsTheSame(oldItem: ChatListItem, newItem: ChatListItem): Boolean {
+                return oldItem == newItem
+            }
+
+        }
+    }
+
+}

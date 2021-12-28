@@ -70,6 +70,7 @@ class HomeFragment:Fragment(R.layout.fragment_home) {
         //view 재사용 과정에서 생기는 중복 피함
         articlList.clear()
 
+
         articleAdapter = ArticleAdapter(onItemClicked = { ArticleModel ->
 
             if(auth.currentUser != null){

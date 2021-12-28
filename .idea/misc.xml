@@ -25,6 +25,7 @@
         <entry key="app/src/main/res/layout/activity_tinder_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_tinder_match.xml" value="0.20625" />
         <entry key="app/src/main/res/layout/activity_trade_addarticle.xml" value="0.19303955933900852" />
+        <entry key="app/src/main/res/layout/activity_trade_chatroom.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_trade_main.xml" value="0.22056159420289856" />
         <entry key="app/src/main/res/layout/actvity_main_gettingpush.xml" value="0.21784420289855072" />
         <entry key="app/src/main/res/layout/fragment_chatlist.xml" value="0.1" />
@@ -34,6 +35,7 @@
         <entry key="app/src/main/res/layout/item_article.xml" value="0.19303955933900852" />
         <entry key="app/src/main/res/layout/item_book.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_card.xml" value="0.22056159420289856" />
+        <entry key="app/src/main/res/layout/item_chat_list.xml" value="0.286231884057971" />
         <entry key="app/src/main/res/layout/item_history.xml" value="0.22056159420289856" />
         <entry key="app/src/main/res/layout/item_matched_user.xml" value="0.20625" />
         <entry key="app/src/main/res/layout/item_quote.xml" value="0.25" />
