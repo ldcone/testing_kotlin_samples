@@ -34,6 +34,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".tinder.MatchedUserActivity"/>
+        <activity android:name=".tradeapp.MainActivity"/>
 
 
         <activity
@@ -45,12 +46,21 @@
         <activity android:name=".tradeapp.home.ArticleAddActivity"/>
         <activity android:name=".tradeapp.chatlist.chatRoomActivity"/>
         <activity
-            android:name=".tradeapp.MainActivity"
-            android:exported="true">
+            android:name=".repository.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:host="github-auth"
+                    android:scheme="testing-kotlin-samples"/>
+
             </intent-filter>
         </activity>
         <activity android:name=".tinder.MainActivity"/>

@@ -20,6 +20,7 @@
         <entry key="app/src/main/res/layout/activity_main_simpleweb.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_main_todayword.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_photoframe.xml" value="0.19303955933900852" />
+        <entry key="app/src/main/res/layout/activity_repository_main.xml" value="0.20364583333333333" />
         <entry key="app/src/main/res/layout/activity_tinder_like.xml" value="0.22056159420289856" />
         <entry key="app/src/main/res/layout/activity_tinder_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_tinder_main.xml" value="0.1" />
@@ -44,6 +45,9 @@
         <entry key="app/src/main/res/menu/menu.xml" value="0.4015625" />
       </map>
     </option>
+  </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/testing_kotlin_samples/repository/data/response/sdf.kt" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
